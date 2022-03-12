@@ -1,5 +1,7 @@
-import Row from "./components/row/Row";
+import Nav from "./components/nav/Nav";
 import Banner from "./components/banner/Banner";
+import Row from "./components/row/Row";
+
 import requests from "./requests";
 
 import './App.css';
@@ -9,8 +11,8 @@ import './App.css';
 const App = () => {
 
   return (
-    <div className="App">      
-    {/* nav */}    
+    <div className="app">      
+    <Nav/>
     <Banner/>
     <Row title="NETFLIX ORIGINALS" isLargeRow fetchUrl={requests.fetchNetflixOriginals}/>
     <Row title="Trending Now" fetchUrl={requests.fetchTrending}/>
